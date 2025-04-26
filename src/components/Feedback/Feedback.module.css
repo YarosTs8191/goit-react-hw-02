@@ -1,0 +1,9 @@
+.feedback {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.feedback p {
+  margin: 8px 0;
+}

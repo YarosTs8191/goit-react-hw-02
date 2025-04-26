@@ -1,0 +1,40 @@
+.options {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.options button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.good:hover {
+  border-color: green;
+}
+
+.good:focus {
+  background-color: green;
+}
+.neutral:hover {
+  border-color: goldenrod;
+}
+
+.neutral:focus {
+  background-color: goldenrod;
+}
+.bad:hover {
+  border-color: crimson;
+}
+
+.bad:focus {
+  background-color: crimson;
+}
+.reset:hover {
+  border-color: gray;
+}
+
+.reset :focus {
+  background-color: gray;
+}
