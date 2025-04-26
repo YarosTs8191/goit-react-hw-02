@@ -31,10 +31,18 @@
 .bad:focus {
   background-color: crimson;
 }
+.reset {
+  border: 1px solid transparent;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
 .reset:hover {
   border-color: gray;
 }
 
-.reset :focus {
-  background-color: gray;
+/* Стиль коли відбувається ресет */
+.resetting {
+  background-color: lightgray;
+  border-color: gray;
+  color: rgb(16, 16, 16);
 }

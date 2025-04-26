@@ -1,6 +1,18 @@
+import { useState } from "react";
 import css from "./Options.module.css";
 
 const Options = ({ onLeaveFeedback, onResetFeedback, totalFeedback }) => {
+  const [isResetting, setIsResetting] = useState(false);
+
+  const handleResetClick = () => {
+    setIsResetting(true);
+
+    setTimeout(() => {
+      onResetFeedback();
+      setIsResetting(false);
+    }, 1000);
+  };
+
   return (
     <section className={css.options}>
       <button className={css.good} onClick={() => onLeaveFeedback("good")}>
@@ -17,7 +29,10 @@ const Options = ({ onLeaveFeedback, onResetFeedback, totalFeedback }) => {
       </button>
 
       {totalFeedback > 0 && (
-        <button className={css.reset} onClick={onResetFeedback}>
+        <button
+          className={`${css.reset} ${isResetting ? css.resetting : ""}`}
+          onClick={handleResetClick}
+        >
           Reset
         </button>
       )}
